@@ -13,11 +13,11 @@ on:
 
 jobs:
   android:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 300
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           submodules: recursive
@@ -28,19 +28,27 @@ jobs:
           df -h
 
       - name: Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
 
-      - name: Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: NDK + CMake
+      - name: Android SDK + NDK + CMake
         run: |
-          yes | sdkmanager --licenses > /dev/null || true
-          sdkmanager "ndk;28.2.13676358" "cmake;3.22.1" "platforms;android-36" "build-tools;36.0.0"
-          echo "ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk/28.2.13676358" >> "$GITHUB_ENV"
+          SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-$HOME/android-sdk}}"
+          SM="$SDK/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$SM" ]; then
+            mkdir -p "$SDK/cmdline-tools"
+            curl -sSL -o /tmp/clt.zip https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip
+            unzip -q /tmp/clt.zip -d "$SDK/cmdline-tools"
+            rm -rf "$SDK/cmdline-tools/latest"
+            mv "$SDK/cmdline-tools/cmdline-tools" "$SDK/cmdline-tools/latest"
+          fi
+          yes | "$SM" --sdk_root="$SDK" --licenses > /dev/null || true
+          "$SM" --sdk_root="$SDK" "platform-tools" "ndk;28.2.13676358" "cmake;3.22.1" "platforms;android-36" "build-tools;36.0.0"
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_NDK_ROOT=$SDK/ndk/28.2.13676358" >> "$GITHUB_ENV"
 
       - name: Host tools
         run: sudo apt-get update && sudo apt-get install -y ninja-build glslang-tools
