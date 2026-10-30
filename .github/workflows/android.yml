@@ -11,6 +11,9 @@ on:
   push:
     branches: [master, main]
 
+permissions:
+  contents: write
+
 jobs:
   android:
     runs-on: ubuntu-24.04
@@ -45,7 +48,7 @@ jobs:
             mv "$SDK/cmdline-tools/cmdline-tools" "$SDK/cmdline-tools/latest"
           fi
           yes | "$SM" --sdk_root="$SDK" --licenses > /dev/null || true
-          "$SM" --sdk_root="$SDK" "platform-tools" "ndk;28.2.13676358" "cmake;3.22.1" "platforms;android-36" "build-tools;36.0.0"
+          "$SM" --sdk_root="$SDK" "platform-tools" "ndk;28.2.13676358" "cmake;3.31.5" "platforms;android-36" "build-tools;36.0.0"
           echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
           echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
           echo "ANDROID_NDK_ROOT=$SDK/ndk/28.2.13676358" >> "$GITHUB_ENV"
@@ -56,7 +59,17 @@ jobs:
       - name: Build
         run: |
           chmod +x .ci/android/build.sh
-          .ci/android/build.sh -t "${{ github.event.inputs.flavor || 'standard' }}" -b Release
+          set -o pipefail
+          .ci/android/build.sh -t "${{ github.event.inputs.flavor || 'standard' }}" -b Release 2>&1 | tee "$RUNNER_TEMP/build.log"
+
+      - name: Publier le log d'erreur (branche ci-logs)
+        if: failure()
+        run: |
+          mkdir -p /tmp/logs && cd /tmp/logs && git init -q -b ci-logs
+          grep -n -i -E "error|failed|fatal|what went wrong|could not" "$RUNNER_TEMP/build.log" | tail -300 > errors.txt || true
+          tail -500 "$RUNNER_TEMP/build.log" > tail.txt || true
+          git add . && git -c user.name=ci -c user.email=ci@localhost commit -qm "log ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" ci-logs
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
