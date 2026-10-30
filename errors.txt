@@ -1,0 +1,100 @@
+20:Starting process 'Gradle build daemon'. Working directory: /home/runner/.gradle/daemon/8.13 Command: /usr/lib/jvm/temurin-17-jdk-amd64/bin/java --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -Xms512m -Dfile.encoding=UTF-8 -Duser.country -Duser.language=en -Duser.variant -cp /home/runner/.gradle/wrapper/dists/gradle-8.13-bin/5xuhj0ry160q40clulazy9h7d/gradle-8.13/lib/gradle-daemon-main-8.13.jar -javaagent:/home/runner/.gradle/wrapper/dists/gradle-8.13-bin/5xuhj0ry160q40clulazy9h7d/gradle-8.13/lib/agents/gradle-instrumentation-agent-8.13.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.13
+359:Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_annotations/2.3.1/error_prone_annotations-2.3.1.pom]
+361:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.3.1/error_prone_annotations-2.3.1.pom to /home/runner/.gradle/.tmp/gradle_download17253684417389679398bin
+365:Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_parent/2.3.1/error_prone_parent-2.3.1.pom]
+368:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_parent/2.3.1/error_prone_parent-2.3.1.pom to /home/runner/.gradle/.tmp/gradle_download2520895926151686966bin
+377:Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.pom]
+378:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.pom to /home/runner/.gradle/.tmp/gradle_download15288169446871115364bin
+379:Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_parent/2.11.0/error_prone_parent-2.11.0.pom]
+380:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_parent/2.11.0/error_prone_parent-2.11.0.pom to /home/runner/.gradle/.tmp/gradle_download15861661825153471423bin
+399:Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.pom]
+400:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.pom to /home/runner/.gradle/.tmp/gradle_download5006137725320036085bin
+401:Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_parent/2.18.0/error_prone_parent-2.18.0.pom]
+402:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_parent/2.18.0/error_prone_parent-2.18.0.pom to /home/runner/.gradle/.tmp/gradle_download13600262234712761226bin
+595:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar to /home/runner/.gradle/.tmp/gradle_download15604165147060136915bin
+992:Caching disabled for InstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
+2906:Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
+2912:Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
+3380:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom to /home/runner/.gradle/.tmp/gradle_download919843660197297838bin
+3382:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom to /home/runner/.gradle/.tmp/gradle_download8243264958608893025bin
+3403:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.16/error_prone_annotations-2.16.pom to /home/runner/.gradle/.tmp/gradle_download10277568772451449984bin
+3404:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_parent/2.16/error_prone_parent-2.16.pom to /home/runner/.gradle/.tmp/gradle_download8197382549209629901bin
+3432:Downloading https://plugins.gradle.org/m2/com/google/errorprone/error_prone_annotations/2.16/error_prone_annotations-2.16.jar to /home/runner/.gradle/.tmp/gradle_download13199297439180462363bin
+3505:Caching disabled for InstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.16/3fdb501b45ba22c6e9c0f2abdb6ed747a48c71af/error_prone_annotations-2.16.jar because:
+3868:Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.16/3fdb501b45ba22c6e9c0f2abdb6ed747a48c71af/error_prone_annotations-2.16.jar because:
+3877:Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.16/3fdb501b45ba22c6e9c0f2abdb6ed747a48c71af/error_prone_annotations-2.16.jar because:
+4435:Tasks to be executed: [task ':app:preBuild', task ':app:preMainlineRelWithDebInfoBuild', task ':app:configureCMakeRelWithDebInfo[arm64-v8a]', task ':app:buildCMakeRelWithDebInfo[arm64-v8a]', task ':app:preMainlineReleaseBuild', task ':app:mergeMainlineReleaseJniLibFolders', task ':app:mergeMainlineReleaseNativeLibs', task ':app:stripMainlineReleaseDebugSymbols', task ':app:extractMainlineReleaseNativeSymbolTables', task ':app:mergeMainlineReleaseNativeDebugMetadata', task ':app:buildKotlinToolingMetadata', task ':app:checkMainlineReleaseDuplicateClasses', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:dataBindingMergeDependencyArtifactsMainlineRelease', task ':app:generateMainlineReleaseResValues', task ':app:extractMainlineReleaseSupportedLocales', task ':app:generateMainlineReleaseLocaleConfig', task ':app:generateMainlineReleaseResources', task ':app:mergeMainlineReleaseResources', task ':app:packageMainlineReleaseResources', task ':app:parseMainlineReleaseLocalResources', task ':app:dataBindingGenBaseClassesMainlineRelease', task ':app:generateMainlineReleaseBuildConfig', task ':app:generateSafeArgsMainlineRelease', task ':app:checkMainlineReleaseAarMetadata', task ':app:mapMainlineReleaseSourceSetPaths', task ':app:createMainlineReleaseCompatibleScreenManifests', task ':app:extractDeepLinksMainlineRelease', task ':app:processMainlineReleaseMainManifest', task ':app:processMainlineReleaseManifest', task ':app:processMainlineReleaseManifestForPackage', task ':app:processMainlineReleaseResources', task ':app:compileMainlineReleaseKotlin', task ':app:javaPreCompileMainlineRelease', task ':app:compileMainlineReleaseJavaWithJavac', task ':app:mergeMainlineReleaseArtProfile', task ':app:expandMainlineReleaseArtProfileWildcards', task ':app:extractProguardFiles', task ':app:mergeMainlineReleaseGeneratedProguardFiles', task ':app:processMainlineReleaseJavaRes', task ':app:mergeMainlineReleaseJavaResource', task ':app:mergeMainlineReleaseStartupProfile', task ':app:minifyMainlineReleaseWithR8', task ':app:compileMainlineReleaseArtProfile', task ':app:mergeMainlineReleaseShaders', task ':app:compileMainlineReleaseShaders', task ':app:generateMainlineReleaseAssets', task ':app:mergeMainlineReleaseAssets', task ':app:compressMainlineReleaseAssets', task ':app:extractMainlineReleaseVersionControlInfo', task ':app:generateMainlineReleaseLintVitalReportModel', task ':app:lintVitalAnalyzeMainlineRelease', task ':app:lintVitalReportMainlineRelease', task ':app:lintVitalMainlineRelease', task ':app:optimizeMainlineReleaseResources', task ':app:collectMainlineReleaseDependencies', task ':app:sdkMainlineReleaseDependencyData', task ':app:validateSigningMainlineRelease', task ':app:writeMainlineReleaseAppMetadata', task ':app:writeMainlineReleaseSigningConfigVersions', task ':app:packageMainlineRelease', task ':app:createMainlineReleaseApkListingFileRedirect', task ':app:assembleMainlineRelease', task ':app:processApplicationManifestMainlineReleaseForBundle', task ':app:bundleMainlineReleaseResources', task ':app:buildMainlineReleasePreBundle', task ':app:configureMainlineReleaseDependencies', task ':app:parseMainlineReleaseIntegrityConfig', task ':app:packageMainlineReleaseBundle', task ':app:signMainlineReleaseBundle', task ':app:produceMainlineReleaseBundleIdeListingFile', task ':app:createMainlineReleaseBundleListingFileRedirect', task ':app:bundleMainlineRelease', task ':app:copyMainlineReleaseOutputs']
+4570:C/C++: -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+4574:C/C++: -- Could NOT find RenderDoc (missing: RenderDoc_INCLUDE_DIR) 
+4581:C/C++: -- Performing Test BOOST_ATOMIC_TARGET_X86 - Failed
+4583:C/C++: -- Performing Test BOOST_ATOMIC_HAS_PTHREAD_COND_CLOCKWAIT - Failed
+4590:C/C++: -- Performing Test BOOST_FILESYSTEM_HAS_CXX20_ATOMIC_REF - Failed
+4598:C/C++: -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_MTIMESPEC - Failed
+4600:C/C++: -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMENSEC - Failed
+4602:C/C++: -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMESPEC - Failed
+4626:C/C++: -- Performing Test CFLAG_pedantic_errors
+4627:C/C++: -- Performing Test CFLAG_pedantic_errors - Success
+4716:C/C++:   Could not get package version.
+4775:C/C++:  * OPUS_ASSERTIONS, additional software error checking.
+4857:C/C++: -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+4876:C/C++: -- Could NOT find libusb (missing: LIBUSB_LINK_LIBRARIES) (found version "")
+4881:C/C++: CMake Error at src/audio_core/CMakeLists.txt:7 (add_library):
+4888:C/C++: CMake Generate step failed.  Build files cannot be regenerated correctly.
+4906:-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+4910:-- Could NOT find RenderDoc (missing: RenderDoc_INCLUDE_DIR) 
+4917:-- Performing Test BOOST_ATOMIC_TARGET_X86 - Failed
+4919:-- Performing Test BOOST_ATOMIC_HAS_PTHREAD_COND_CLOCKWAIT - Failed
+4926:-- Performing Test BOOST_FILESYSTEM_HAS_CXX20_ATOMIC_REF - Failed
+4934:-- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_MTIMESPEC - Failed
+4936:-- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMENSEC - Failed
+4938:-- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMESPEC - Failed
+4956:-- Performing Test CFLAG_pedantic_errors
+4957:-- Performing Test CFLAG_pedantic_errors - Success
+5108: * OPUS_ASSERTIONS, additional software error checking.
+5193:-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+5212:-- Could NOT find libusb (missing: LIBUSB_LINK_LIBRARIES) (found version "")
+5219:C++ build system [configure] failed while executing:
+5258:  Could not get package version.
+5263:CMake Error at src/audio_core/CMakeLists.txt:7 (add_library):
+5275:CMake Generate step failed.  Build files cannot be regenerated correctly.
+5278:> Task :app:configureCMakeRelWithDebInfo[arm64-v8a] FAILED
+5282:FAILURE: Build failed with an exception.
+5284:* What went wrong:
+5285:Execution failed for task ':app:configureCMakeRelWithDebInfo[arm64-v8a]'.
+5286:> [CXX1429] error when building with cmake using /home/runner/work/Edenswitch2/Edenswitch2/CMakeLists.txt: -- The C compiler identification is Clang 19.0.1
+5302:  -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+5306:  -- Could NOT find RenderDoc (missing: RenderDoc_INCLUDE_DIR) 
+5313:  -- Performing Test BOOST_ATOMIC_TARGET_X86 - Failed
+5315:  -- Performing Test BOOST_ATOMIC_HAS_PTHREAD_COND_CLOCKWAIT - Failed
+5322:  -- Performing Test BOOST_FILESYSTEM_HAS_CXX20_ATOMIC_REF - Failed
+5330:  -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_MTIMESPEC - Failed
+5332:  -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMENSEC - Failed
+5334:  -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMESPEC - Failed
+5352:  -- Performing Test CFLAG_pedantic_errors
+5353:  -- Performing Test CFLAG_pedantic_errors - Success
+5504:   * OPUS_ASSERTIONS, additional software error checking.
+5589:  -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+5608:  -- Could NOT find libusb (missing: LIBUSB_LINK_LIBRARIES) (found version "")
+5615:  C++ build system [configure] failed while executing:
+5654:    Could not get package version.
+5659:  CMake Error at src/audio_core/CMakeLists.txt:7 (add_library):
+5671:  CMake Generate step failed.  Build files cannot be regenerated correctly. : com.android.ide.common.process.ProcessException: -- The C compiler identification is Clang 19.0.1
+5687:  -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+5691:  -- Could NOT find RenderDoc (missing: RenderDoc_INCLUDE_DIR) 
+5698:  -- Performing Test BOOST_ATOMIC_TARGET_X86 - Failed
+5700:  -- Performing Test BOOST_ATOMIC_HAS_PTHREAD_COND_CLOCKWAIT - Failed
+5707:  -- Performing Test BOOST_FILESYSTEM_HAS_CXX20_ATOMIC_REF - Failed
+5715:  -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_MTIMESPEC - Failed
+5717:  -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMENSEC - Failed
+5719:  -- Performing Test BOOST_FILESYSTEM_HAS_STAT_ST_BIRTHTIMESPEC - Failed
+5737:  -- Performing Test CFLAG_pedantic_errors
+5738:  -- Performing Test CFLAG_pedantic_errors - Success
+5889:   * OPUS_ASSERTIONS, additional software error checking.
+5974:  -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+5993:  -- Could NOT find libusb (missing: LIBUSB_LINK_LIBRARIES) (found version "")
+6000:  C++ build system [configure] failed while executing:
+6039:    Could not get package version.
+6044:  CMake Error at src/audio_core/CMakeLists.txt:7 (add_library):
+6056:  CMake Generate step failed.  Build files cannot be regenerated correctly.
+6200:  Caused by: com.android.ide.common.process.ProcessException: Error while executing process /usr/local/lib/android/sdk/cmake/3.31.5/bin/cmake with arguments {-H/home/runner/work/Edenswitch2/Edenswitch2 -DCMAKE_SYSTEM_NAME=Android -DCMAKE_SYSTEM_VERSION=33 -DANDROID_PLATFORM=android-33 -DANDROID_ABI=arm64-v8a -DCMAKE_ANDROID_ARCH_ABI=arm64-v8a -DANDROID_NDK=/usr/local/lib/android/sdk/ndk/28.2.13676358 -DCMAKE_ANDROID_NDK=/usr/local/lib/android/sdk/ndk/28.2.13676358 -DCMAKE_TOOLCHAIN_FILE=/usr/local/lib/android/sdk/ndk/28.2.13676358/build/cmake/android.toolchain.cmake -DCMAKE_MAKE_PROGRAM=/usr/local/lib/android/sdk/cmake/3.31.5/bin/ninja -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/runner/work/Edenswitch2/Edenswitch2/src/android/app/build/intermediates/cxx/RelWithDebInfo/6u631p5t/obj/arm64-v8a -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/runner/work/Edenswitch2/Edenswitch2/src/android/app/build/intermediates/cxx/RelWithDebInfo/6u631p5t/obj/arm64-v8a -DCMAKE_BUILD_TYPE=RelWithDebInfo -B/home/runner/work/Edenswitch2/Edenswitch2/src/android/app/.cxx/RelWithDebInfo/6u631p5t/arm64-v8a -GNinja -DENABLE_QT=0 -DENABLE_WEB_SERVICE=1 -DANDROID_ARM_NEON=true -DYUZU_USE_CPM=ON -DCPMUTIL_FORCE_BUNDLED=ON -DYUZU_USE_BUNDLED_FFMPEG=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_TESTING=OFF -DYUZU_TESTS=OFF -DDYNARMIC_TESTS=OFF -DUSE_CCACHE=false}
+6223:BUILD FAILED in 1m 37s
