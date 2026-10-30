@@ -10,6 +10,8 @@ on:
         options: [standard, optimized, legacy]
   push:
     branches: [master, main]
+    paths-ignore:
+      - ".github/workflows/publish-apk.yml"
 
 permissions:
   contents: write
@@ -79,3 +81,16 @@ jobs:
             artifacts/*.apk
             src/android/app/build/outputs/apk/**/*.apk
           if-no-files-found: error
+
+      - name: Publier l'APK dans Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p release
+          find artifacts src/android/app/build/outputs/apk -name '*.apk' -exec cp {} release/ \; 2>/dev/null || true
+          for f in release/*.apk; do mv "$f" "release/Eden-${{ github.event.inputs.flavor || 'standard' }}.apk"; break; done
+          TAG="build-${{ github.event.inputs.flavor || 'standard' }}"
+          gh release delete "$TAG" --yes --cleanup-tag -R "${{ github.repository }}" || true
+          gh release create "$TAG" release/*.apk -R "${{ github.repository }}" --target "${{ github.sha }}" \
+            --title "Eden Android (${{ github.event.inputs.flavor || 'standard' }}) - build ${{ github.run_number }}" \
+            --notes "APK compilé automatiquement. Télécharge le fichier .apk ci-dessous et installe-le sur ta console."

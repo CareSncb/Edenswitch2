@@ -1,0 +1,33 @@
+name: Publier l'APK existant
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/publish-apk.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: eden-android-standard
+          run-id: 41051695822
+          github-token: ${{ github.token }}
+          path: dl
+      - name: Créer la release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p release
+          f=$(find dl -name '*.apk' | head -1); ls -la dl -R
+          cp "$f" release/Eden-standard.apk
+          gh release delete build-standard --yes --cleanup-tag -R "${{ github.repository }}" || true
+          gh release create build-standard release/Eden-standard.apk -R "${{ github.repository }}" --target "${{ github.sha }}" \
+            --title "Eden Android (standard)" \
+            --notes "APK compilé automatiquement. Télécharge le fichier .apk ci-dessous et installe-le sur ta console."
